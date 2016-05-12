@@ -1,0 +1,7 @@
+<div class="remove_dialog">
+  <div>Remove "{{dialog.params.name}}"?</div>
+  <div>
+    <button ng-click="dialog.resultCallback({result:false, data:null})">no</button>
+    <button ng-click="dialog.resultCallback({result:true, data:dialog.params})">yes</button>
+  </div>
+</div>

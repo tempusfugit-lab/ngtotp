@@ -1,0 +1,9 @@
+<div class="add_dialog">
+  <div>
+    <label>Name: <input type="text" ng-model="dialog.resultData.name"></label>
+  </div>
+  <div>
+    <label>Key: <input type="text" ng-model="dialog.resultData.key"></label>
+  </div>
+  <button ng-click="dialog.resultCallback({result:true, data:dialog.resultData}); dialog.resultData = {}">ok</button>
+</div>
