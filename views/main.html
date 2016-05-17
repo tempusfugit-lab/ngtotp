@@ -1,0 +1,24 @@
+<div class="content">
+  <div class="overlay" ng-if="dialog.showDialog">
+    <div class="dialog">
+      <div class="dialog_head">
+        <div class="dialog_title">{{dialog.title}}</div>
+        <div class="dialog_close" ng-click="dialog.showDialog = false"></div>
+      </div>
+      <div class="dialog_content" ng-include="dialog.contentUrl"></div>
+    </div>
+  </div>
+  <ngt-menu class-name="top" dialog-callback="handler.addResultHandler"></ngt-menu>
+  <div ng-controller="ItemManager as im">
+    <div class="items" ng-sortable="sortConf">
+      <div ng-repeat="item in im.items">
+        <div>
+          <div>{{item.name}}</div>
+          <div ng-click="im.confirmRemove(item)"></div>
+        </div>
+        <div>{{item.value}}</div>
+      </div>
+    </div>
+  </div>
+  <ngt-menu class-name="bottom" dialog-callback="handler.addResultHandler" show-footer="true"></ngt-menu>
+</div>

@@ -1,0 +1,9 @@
+<div class="menu {{menu.className}}">
+  <div class="bar_wrapper">
+    <div class="bar_border">
+      <div ng-repeat="bar in menu.bar" class="bar" style="width:{{bar.width}}; transition:{{bar.transition}};"></div>
+    </div>
+  </div>
+  <div class="add_icon" ng-click="menu.addIconClicked()"></div>
+  <div class="under_menu" ng-if="menu.showFooter">© 2016 Tempus Fugit,Inc.<a href="http://www.tempusfugit.jp/">about us</a></div>
+</div>
